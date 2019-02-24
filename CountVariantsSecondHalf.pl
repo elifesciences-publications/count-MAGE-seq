@@ -139,7 +139,13 @@ while (!eof(FILE1) and !eof(FILE2)){
   }
   
   if ($str !~ /[ACTG]/){
+    my $test=0;
+    foreach my $val (@qstr){
+      if (exists $badqual{$val}){$test++;last;};
+    }
+    if ($test==0){
       $counts{'wt'}++;
+    } else {$bad3++;}
   } else {
     my @codons= unpack("(A3)*", $str);
     my $count;
@@ -158,7 +164,7 @@ while (!eof(FILE1) and !eof(FILE2)){
       my $base1=($changed-1)*3;
       for (my $i=$base1; $i<$base1+3; $i++){
         my $B=$i-$base1;
-        if (exists $badqual{$qstr[$i]} and $nts[$B] ne $wtnts[$B]){
+        if (exists $badqual{$qstr[$i]}){
           $test++; last;
         }
       }
