@@ -2,7 +2,7 @@
 
 This readme file describes the  sequence data, bioinformatics steps and scripts used to analyze the MAGE-seq data in:
 
-Konate, M., Plata, G., Park,J., Wang, H.H., Vitkup, D. Molecular function limits divergent protein evolution on planetary timescales.
+Konate, M., Plata, G., Park,J., Wang, H.H., Vitkup, D. Molecular function limits divergent protein evolution on planetary timescales. 2019 http://dx.doi.org/10.7554/eLife.39705
 
 Below we describe the steps used to obtain the number of reads associated with each mutant and the "wild type" strain for 
 a particular sample. Each sample corresponds to either the first or the second half of the FolA protein, and a particular 
